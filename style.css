@@ -1,0 +1,22 @@
+/* تعديل بسيط للـ Hero Buttons */
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn.secondary {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: transparent;
+    color: var(--accent-color);
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #484f58;
+}
