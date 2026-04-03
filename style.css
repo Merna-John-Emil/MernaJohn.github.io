@@ -1,22 +1,140 @@
-/* تعديل بسيط للـ Hero Buttons */
-.hero-btns {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* خلفية غامقة مائلة للبنفسجي العميق */
+    background-color: #0d0b1a; 
+    color: #e6edf3;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* الخط المخصص للعناوين */
+h1, h2, h3, .section-heading {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #2d2a4a;
+    padding-bottom: 40px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #bc77ff; /* اسمك باللون البنفسجي الفاتح */
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(188, 119, 255, 0.3);
+}
+
+.title-blue {
+    color: #4493f8; /* التايتل باللون الأزرق */
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.bio {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #a29dbd;
+}
+
+/* الخط الأخضر الجانبي للعناوين */
+.section-heading {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 4px solid #2ea043; /* الأخضر النيون */
+}
+
+/* Skills Badges */
+.skills-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
-    margin-top: 20px;
 }
 
-.btn.secondary {
-    background: var(--accent-color);
-    color: white;
+.skill-badge {
+    background-color: #1c1930;
+    color: #bc77ff; /* النص جوه البادج بنفسجي */
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    border: 1px solid #3d375e;
+    transition: 0.3s;
 }
 
-.btn.secondary:hover {
-    background: transparent;
-    color: var(--accent-color);
+.skill-badge:hover {
+    border-color: #4493f8; /* يتحول لأزرق عند الوقوف عليه */
+    transform: translateY(-3px);
 }
 
-.copyright {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    color: #484f58;
+/* Project Cards */
+.project-card {
+    background-color: #161426; /* كارت بنفسجي غامق */
+    border: 1px solid #2d2a4a;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 15px rgba(68, 147, 248, 0.1);
+}
+
+.project-title {
+    color: #4493f8; /* عنوان المشروع بالأزرق */
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #a29dbd;
+    margin-bottom: 25px;
+}
+
+/* الزراير الخضراء */
+.btn-green {
+    display: inline-block;
+    background-color: #238636; /* أخضر تقني */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-green:hover {
+    background-color: #2ea043;
+    box-shadow: 0 0 10px rgba(46, 160, 67, 0.4);
+}
+
+/* Contact Section */
+.contact-info a {
+    color: #bc77ff; /* لينكات التواصل بالبنفسجي */
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.contact-info a:hover {
+    color: #4493f8; /* تتحول لأزرق عند الـ Hover */
+    border-bottom: 1px solid #4493f8;
 }
