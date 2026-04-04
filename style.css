@@ -18,15 +18,15 @@ body {
     overflow-x: hidden;
 }
 
-/* Background Orbs (Decorative) */
+/* Background Orbs */
 .orb {
     position: fixed;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
-    filter: blur(120px);
+    filter: blur(140px);
     z-index: -1;
-    opacity: 0.15;
+    opacity: 0.12;
 }
 .orb-1 { top: -100px; left: -100px; background: var(--purple); }
 .orb-2 { bottom: -100px; right: -100px; background: var(--blue); }
@@ -36,57 +36,92 @@ body {
     position: fixed;
     top: 0; width: 100%;
     padding: 20px 5%;
-    background: rgba(3, 3, 3, 0.8);
+    background: rgba(3, 3, 3, 0.85);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
 }
-.nav-content { display: flex; justify-content: space-between; align-items: center; }
-.logo-area { display: flex; align-items: center; gap: 12px; }
-.profile-icon { width: 35px; height: 35px; border-radius: 8px; border: 1px solid var(--green); }
-.logo-text .name { display: block; font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; }
-.logo-text .tagline { font-size: 0.65rem; color: var(--blue); font-weight: 500; }
-
+.nav-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+.nav-logo-text { font-weight: 700; letter-spacing: 2px; font-size: 1rem; color: var(--blue); }
 .nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
 .nav-links a { text-decoration: none; color: #888; font-size: 0.85rem; transition: 0.3s; }
 .nav-links a:hover { color: var(--text); }
-.nav-contact-btn { border: 1px solid var(--purple); padding: 8px 18px; border-radius: 50px; color: #fff !important; }
+.nav-contact-btn { border: 1px solid var(--purple); padding: 8px 20px; border-radius: 50px; color: #fff !important; }
 
-/* Hero */
-.container { max-width: 1100px; margin: 150px auto 100px; padding: 0 20px; }
-.hero { text-align: center; margin-bottom: 120px; }
-.main-title { font-family: 'Syne', sans-serif; font-size: 4rem; line-height: 1; margin-bottom: 20px; }
-.gradient-text { background: linear-gradient(90deg, var(--blue), var(--green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.hero-desc { color: #888; font-size: 1.2rem; }
+/* Main Wrapper */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
-/* Glass Sections (Spaces included here) */
+/* Hero Split Layout */
+.hero-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding-top: 180px;
+    margin-bottom: 150px;
+}
+.hero-left { flex: 1.2; }
+.hero-right { flex: 0.8; display: flex; justify-content: flex-end; }
+
+.huge-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 6.5rem;
+    line-height: 0.85;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.gradient-text { background: linear-gradient(90deg, var(--blue), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-bio { font-size: 1.25rem; color: #aaa; max-width: 550px; line-height: 1.6; }
+
+.hero-image-container { width: 100%; max-width: 450px; position: relative; }
+.hero-art { 
+    width: 100%; 
+    border-radius: 30px; 
+    border: 1px solid var(--border); 
+    box-shadow: 0 0 60px rgba(157, 0, 255, 0.15); 
+}
+
+/* Glass Sections (With Large Spacing) */
 .glass-section {
     background: var(--glass);
     border: 1px solid var(--border);
-    padding: 60px;
-    border-radius: 32px;
-    margin-bottom: 80px; /* Di el-space elly ben el-sections */
+    padding: 80px;
+    border-radius: 40px;
+    margin-bottom: 120px; /* Big space between sections */
+    backdrop-filter: blur(10px);
 }
-.section-label { font-size: 0.75rem; color: var(--purple); letter-spacing: 3px; margin-bottom: 30px; }
+
+.section-label {
+    font-size: 1.3rem;
+    color: var(--purple);
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom: 50px;
+    border-left: 6px solid var(--purple);
+    padding-left: 25px;
+}
 
 /* Skills Grid */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.skill-card { background: rgba(255,255,255,0.02); padding: 30px; border-radius: 20px; border: 1px solid var(--border); transition: 0.3s; }
-.skill-card:hover { border-color: var(--blue); transform: translateY(-5px); }
-.card-icon { width: 10px; height: 10px; border-radius: 50%; margin-bottom: 15px; }
-.card-icon.blue { background: var(--blue); box-shadow: 0 0 10px var(--blue); }
-.card-icon.green { background: var(--green); box-shadow: 0 0 10px var(--green); }
-.card-icon.purple { background: var(--purple); box-shadow: 0 0 10px var(--purple); }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.skill-card { background: rgba(255,255,255,0.02); padding: 40px; border-radius: 24px; border: 1px solid var(--border); transition: 0.4s; }
+.skill-card:hover { border-color: var(--green); transform: translateY(-10px); }
+.card-icon { width: 12px; height: 12px; border-radius: 50%; margin-bottom: 20px; }
+.card-icon.blue { background: var(--blue); box-shadow: 0 0 15px var(--blue); }
+.card-icon.green { background: var(--green); box-shadow: 0 0 15px var(--green); }
+.card-icon.purple { background: var(--purple); box-shadow: 0 0 15px var(--purple); }
 
-/* Project Button */
-.project-btn { display: inline-block; margin-top: 20px; color: var(--green); text-decoration: none; font-weight: 700; border-bottom: 2px solid var(--green); padding-bottom: 5px; }
-
-/* Contact */
-.contact-grid { display: flex; gap: 40px; }
-.contact-item { text-decoration: none; color: #fff; font-size: 1.1rem; border-bottom: 1px solid #333; padding-bottom: 5px; transition: 0.3s; }
+/* Projects & Contact */
+.project-btn { display: inline-block; margin-top: 25px; color: var(--green); text-decoration: none; font-weight: 700; border-bottom: 2px solid var(--green); padding-bottom: 5px; }
+.contact-grid { display: flex; gap: 50px; }
+.contact-item { text-decoration: none; color: #fff; font-size: 1.2rem; border-bottom: 1px solid #333; padding-bottom: 5px; transition: 0.3s; }
 .contact-item:hover { color: var(--blue); border-color: var(--blue); }
 
-@media (max-width: 768px) {
-    .main-title { font-size: 2.5rem; }
-    .nav-links { display: none; }
+/* Responsive */
+@media (max-width: 1024px) {
+    .huge-name { font-size: 4.5rem; }
+    .hero-split { flex-direction: column; text-align: center; padding-top: 120px; }
+    .hero-bio { margin: 0 auto; }
+    .hero-right { justify-content: center; }
+    .contact-grid { flex-direction: column; gap: 20px; }
 }
