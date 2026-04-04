@@ -51,14 +51,14 @@ body {
 .hero-center { justify-content: flex-start; text-align: left; }
 .huge-name {
     font-family: 'Syne', sans-serif;
-    font-size: 8rem; /* Very Huge Name */
+    font-size: 7rem; /* Very Huge Name */
     line-height: 1;
     color: var(--neon-blue);
     margin-bottom: 10px;
     letter-spacing: -4px;
 }
 .hero-role {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     color: #eee;
     margin-bottom: 30px;
@@ -68,7 +68,7 @@ body {
 /* Section Titles (Huge) */
 .huge-title {
     font-family: 'Syne', sans-serif;
-    font-size: 5rem; /* Huge title as requested */
+    font-size: 4rem; /* Huge title as requested */
     color: var(--purple);
     margin-bottom: 50px;
     letter-spacing: -3px;
@@ -113,7 +113,7 @@ body {
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
     .huge-name { font-size: 5rem; }
-    .huge-title { font-size: 3.5rem; }
+    .huge-title { font-size: 3rem; }
     .hero-role { font-size: 1.5rem; }
     .contact-item { font-size: 2rem; }
 }
