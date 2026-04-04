@@ -1,9 +1,9 @@
 :root {
-    --bg: #030303;
-    --blue: #00d2ff;
+    --bg: #020202;
+    --neon-blue: #00d2ff;
     --purple: #9d00ff;
-    --glass: rgba(255, 255, 255, 0.03);
-    --border: rgba(255, 255, 255, 0.08);
+    --glass: rgba(255, 255, 255, 0.02);
+    --border: rgba(255, 255, 255, 0.1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -17,102 +17,103 @@ body {
 }
 
 /* Background Orbs */
-.orb { position: fixed; width: 600px; height: 600px; border-radius: 50%; filter: blur(150px); z-index: -1; opacity: 0.1; }
+.orb { position: fixed; width: 600px; height: 600px; border-radius: 50%; filter: blur(160px); z-index: -1; opacity: 0.1; }
 .orb-1 { top: -200px; left: -100px; background: var(--purple); }
-.orb-2 { bottom: -200px; right: -100px; background: var(--blue); }
+.orb-2 { bottom: -200px; right: 10%; background: var(--neon-blue); }
 
 /* Navbar */
 .navbar {
     position: fixed;
     top: 0; width: 100%;
-    padding: 20px 5%;
-    background: rgba(3, 3, 3, 0.8);
-    backdrop-filter: blur(10px);
+    padding: 25px 6%;
+    background: rgba(2, 2, 2, 0.9);
+    backdrop-filter: blur(15px);
     z-index: 1000;
     border-bottom: 1px solid var(--border);
 }
-.nav-content { display: flex; justify-content: space-between; align-items: center; }
+.nav-content { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
 .nav-logo { display: flex; flex-direction: column; }
-.logo-name { font-weight: 800; font-size: 1.1rem; color: var(--blue); letter-spacing: 2px; }
-.logo-tag { font-size: 0.6rem; color: #888; text-transform: uppercase; }
-.nav-links { list-style: none; display: flex; gap: 25px; }
-.nav-links a { text-decoration: none; color: #888; font-size: 0.8rem; transition: 0.3s; }
-.nav-links a:hover { color: var(--blue); }
+.logo-name { font-weight: 800; font-size: 1.2rem; color: var(--neon-blue); letter-spacing: 2px; font-family: 'Syne', sans-serif; }
+.logo-tag { font-size: 0.65rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { text-decoration: none; color: #888; font-size: 0.85rem; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--neon-blue); }
 
 /* Full Page Sections */
 .full-page {
-    min-height: 100vh; /* Each section takes full screen */
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 100px 8%;
+    padding: 120px 8%;
 }
 
-/* Hero Section */
-.hero-split { display: flex; justify-content: space-between; gap: 50px; }
-.hero-left { flex: 1.2; }
-.hero-right { flex: 0.8; display: flex; justify-content: flex-end; }
-
+/* Hero Section (Center Focus) */
+.hero-center { justify-content: flex-start; text-align: left; }
 .huge-name {
     font-family: 'Syne', sans-serif;
-    font-size: 7rem; /* Name very big */
-    line-height: 0.85;
-    color: var(--blue); /* All one color */
-    margin-bottom: 20px;
+    font-size: 9rem; /* Very Huge Name */
+    line-height: 1;
+    color: var(--neon-blue);
+    margin-bottom: 10px;
+    letter-spacing: -4px;
 }
 .hero-role {
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: #fff;
-    margin-bottom: 25px;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #eee;
+    margin-bottom: 30px;
 }
-.hero-bio-short { color: #888; font-size: 1.1rem; max-width: 500px; }
+.hero-line { width: 100px; height: 4px; background: var(--neon-blue); border-radius: 2px; }
 
-.hero-art {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 30px;
-    box-shadow: 0 0 50px rgba(0, 210, 255, 0.15);
-    border: 1px solid var(--border);
-}
-
-/* Section Titles */
+/* Section Titles (Huge) */
 .huge-title {
     font-family: 'Syne', sans-serif;
-    font-size: 5rem;
+    font-size: 6rem; /* Huge title as requested */
     color: var(--purple);
-    margin-bottom: 40px;
-    letter-spacing: -2px;
+    margin-bottom: 50px;
+    letter-spacing: -3px;
+    line-height: 1;
 }
 
 .glass-container {
     width: 100%;
     background: var(--glass);
-    padding: 60px;
-    border-radius: 40px;
+    padding: 80px;
+    border-radius: 48px;
     border: 1px solid var(--border);
+    backdrop-filter: blur(5px);
 }
 
-.content-box p { font-size: 1.4rem; line-height: 1.6; color: #ccc; }
+.content-box p { font-size: 1.6rem; line-height: 1.6; color: #ccc; max-width: 900px; }
 
-/* Skills Grid */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.skill-card { background: rgba(255,255,255,0.02); padding: 40px; border-radius: 24px; border: 1px solid var(--border); }
-.skill-card h3 { color: var(--blue); margin-bottom: 15px; }
+/* Skills & Projects */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.skill-card h3 { color: var(--neon-blue); font-size: 1.8rem; margin-bottom: 15px; }
+.skill-card p { font-size: 1.1rem; color: #aaa; line-height: 1.5; }
 
-/* Contact links */
-.contact-info a {
-    font-size: 2rem;
+.project-box h3 { font-size: 2rem; margin-bottom: 20px; }
+.btn-neon { 
+    display: inline-block; margin-top: 30px; color: var(--neon-blue); 
+    text-decoration: none; font-weight: 700; font-size: 1.2rem;
+    border-bottom: 2px solid var(--neon-blue); padding-bottom: 5px;
+}
+
+/* Connect */
+.contact-links { display: flex; flex-wrap: wrap; gap: 60px; }
+.contact-item {
+    font-family: 'Syne', sans-serif;
+    font-size: 3rem;
     color: #fff;
-    margin-right: 40px;
     text-decoration: none;
-    border-bottom: 2px solid var(--purple);
-    transition: 0.3s;
+    transition: 0.4s;
+    border-bottom: 2px solid transparent;
 }
-.contact-info a:hover { color: var(--blue); border-color: var(--blue); }
+.contact-item:hover { color: var(--neon-blue); border-color: var(--neon-blue); transform: translateX(10px); }
 
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
-    .huge-name { font-size: 4rem; }
-    .hero-split { flex-direction: column; text-align: center; }
-    .hero-right { justify-content: center; }
-    .huge-title { font-size: 3rem; }
+    .huge-name { font-size: 5rem; }
+    .huge-title { font-size: 3.5rem; }
+    .hero-role { font-size: 1.5rem; }
+    .contact-item { font-size: 2rem; }
 }
