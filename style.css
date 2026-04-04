@@ -49,6 +49,7 @@ h1 {
     margin: 0 auto;
     font-size: 1rem;
     color: #a29dbd;
+    margin-bottom: 25px;
 }
 
 /* الخط الأخضر الجانبي للعناوين */
@@ -57,7 +58,7 @@ h1 {
     color: #ffffff;
     margin-bottom: 30px;
     padding-left: 15px;
-    border-left: 4px solid #2ea043; /* الأخضر النيون */
+    border-left: 0px solid #2ea043; /* الأخضر النيون */
 }
 
 /* Skills Badges */
