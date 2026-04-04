@@ -3,92 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merna John | Portfolio</title>
+    <title>Merna John | Cyber Security Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="glass-nav">
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">
-                <img src="image_4ea621.png" alt="Security Logo" class="nav-img">
-                <span class="nav-name">Merna John</span>
+            <div class="logo-area">
+                <img src="image_4ea621.png" alt="Merna John Logo" class="profile-icon">
+                <div class="logo-text">
+                    <span class="name">MERNA JOHN</span>
+                    <span class="tagline">SECURITY SPECIALIST</span>
+                </div>
             </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-contact-btn">Contact Me</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="main-wrapper">
+    <main class="container">
         <header class="hero">
-            <h1 class="glow-text">Merna John</h1>
-            <p class="role-subtitle">Cybersecurity Analyst & Pentester</p>
-            <div class="status-badge"><span class="dot"></span> Online for Freelance</div>
+            <h1 class="main-title">Cybersecurity <br><span class="gradient-text">Analyst & Pentester</span></h1>
+            <p class="hero-desc">Expert in VAPT & Web Security with a deep scientific background.</p>
         </header>
 
-        <section id="about" class="glass-card">
-            <h2 class="section-title">About Me</h2>
-            <p>I am a Cybersecurity Specialist with a <strong>deep scientific background</strong>, specializing in Vulnerability Assessment and Penetration Testing (VAPT). I focus on providing actionable security insights and detailed reporting to ensure infrastructure resilience.</p>
+        <section id="about" class="glass-section">
+            <h2 class="section-label">// 01. ABOUT</h2>
+            <div class="content">
+                <p>I specialize in Vulnerability Assessment and Penetration Testing (VAPT), identifying critical flaws like XSS and Brute-Force attacks. My methodology is rooted in a <strong>scientific approach</strong> to ensure infrastructure resilience against evolving threats.</p>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2 class="section-title">Technical Expertise</h2>
+        <section id="skills" class="glass-section">
+            <h2 class="section-label">// 02. TECHNICAL EXPERTISE</h2>
             <div class="skills-grid">
-                <div class="skill-group glass-card">
+                <div class="skill-card">
+                    <div class="card-icon blue"></div>
                     <h3>Programming</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>PHP</li>
-                        <li>Bash Scripting</li>
-                    </ul>
+                    <p>Python, JavaScript, PHP, Bash Scripting</p>
                 </div>
-                <div class="skill-group glass-card">
-                    <h3>Security Tools</h3>
-                    <ul>
-                        <li>Burp Suite Professional</li>
-                        <li>Wireshark</li>
-                        <li>Kali Linux</li>
-                        <li>Metasploit</li>
-                    </ul>
+                <div class="skill-card">
+                    <div class="card-icon green"></div>
+                    <h3>Tools</h3>
+                    <p>Burp Suite, Wireshark, Kali Linux, Metasploit</p>
                 </div>
-                <div class="skill-group glass-card">
+                <div class="skill-card">
+                    <div class="card-icon purple"></div>
                     <h3>Vulnerabilities</h3>
-                    <ul>
-                        <li>XSS & CSRF</li>
-                        <li>SQL Injection</li>
-                        <li>Broken Access Control</li>
-                        <li>SSRF & CORS</li>
-                    </ul>
+                    <p>OWASP Top 10, SQLi, XSS, SSRF, Broken Access Control</p>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-list">
-                <div class="project-item glass-card">
-                    <div class="project-info">
-                        <h3>Web Vulnerability Analysis</h3>
-                        <p>Discovering and mitigating vulnerabilities using scientific methodology.</p>
-                    </div>
-                    <a href="#" class="btn-link">View Writeup →</a>
-                </div>
+        <section id="projects" class="glass-section">
+            <h2 class="section-label">// 03. PROJECTS & WRITEUPS</h2>
+            <div class="project-card-large">
+                <h3>Web Vulnerability Analysis</h3>
+                <p>Detailed analysis and mitigation of critical flaws using scientific methodology.</p>
+                <a href="#" class="project-btn">Read Writeup ↗</a>
             </div>
         </section>
 
-        <section id="contact" class="glass-card contact-section">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-links">
-                <a href="mailto:mernajohn14@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/merna-john-" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Merna-John-Emil" target="_blank">GitHub</a>
+        <footer id="contact" class="glass-section contact">
+            <h2 class="section-label">// 04. CONNECT</h2>
+            <div class="contact-grid">
+                <a href="mailto:mernajohn14@gmail.com" class="contact-item">Email</a>
+                <a href="https://www.linkedin.com/in/merna-john-" target="_blank" class="contact-item">LinkedIn</a>
+                <a href="https://github.com/Merna-John-Emil" target="_blank" class="contact-item">GitHub</a>
             </div>
-        </section>
-    </div>
+        </footer>
+    </main>
+
 </body>
 </html>
