@@ -1,140 +1,116 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Sticky Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 15, 0.95);
+    border-bottom: 1px solid #333;
+    z-index: 1000;
+    padding: 10px 0;
 }
 
-body {
-    /* خلفية غامقة مائلة للبنفسجي العميق */
-    background-color: #0d0b1a; 
-    color: #e6edf3;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-}
-
-/* الخط المخصص للعناوين */
-h1, h2, h3, .section-heading {
-    font-family: 'Share Tech Mono', monospace;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 50px 20px;
-}
-
-/* Header */
-header {
-    text-align: center;
-    margin-bottom: 60px;
-    border-bottom: 1px solid #2d2a4a;
-    padding-bottom: 40px;
-}
-
-h1 {
-    font-size: 3.5rem;
-    color: #bc77ff; /* اسمك باللون البنفسجي الفاتح */
-    margin-bottom: 15px;
-    text-shadow: 0 0 10px rgba(188, 119, 255, 0.3);
-}
-
-.title-blue {
-    color: #4493f8; /* التايتل باللون الأزرق */
-    font-size: 1.3rem;
-    margin-bottom: 25px;
-}
-
-.bio {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1rem;
-    color: #a29dbd;
-}
-
-/* الخط الأخضر الجانبي للعناوين */
-.section-heading {
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-bottom: 30px;
-    padding-left: 15px;
-    border-left: 4px solid #2ea043; /* الأخضر النيون */
-}
-
-/* Skills Badges */
-.skills-container {
+.nav-container {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
     gap: 15px;
 }
 
-.skill-badge {
-    background-color: #1c1930;
-    color: #bc77ff; /* النص جوه البادج بنفسجي */
-    padding: 10px 25px;
-    border-radius: 25px;
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #00ff00; /* Neon green border */
+}
+
+.logo-text .name {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo-text .subtext {
+    color: #00e5ff;
+    font-size: 0.8rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ccc;
     font-size: 0.9rem;
-    border: 1px solid #3d375e;
     transition: 0.3s;
 }
 
-.skill-badge:hover {
-    border-color: #4493f8; /* يتحول لأزرق عند الوقوف عليه */
-    transform: translateY(-3px);
+.nav-links a:hover {
+    color: #00ff00;
 }
 
-/* Project Cards */
-.project-card {
-    background-color: #161426; /* كارت بنفسجي غامق */
-    border: 1px solid #2d2a4a;
-    border-radius: 10px;
-    padding: 30px;
-    margin-bottom: 25px;
-    transition: 0.3s;
+/* Sections Spacing */
+section {
+    padding: 80px 0; /* Di el-masafa ben el-sections */
+    border-bottom: 1px solid #1a1a1a;
 }
 
-.project-card:hover {
-    box-shadow: 0 0 15px rgba(68, 147, 248, 0.1);
+/* Skills Grid (Same as image 2) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
 }
 
-.project-title {
-    color: #4493f8; /* عنوان المشروع بالأزرق */
-    font-size: 1.4rem;
+.skill-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    border-color: #00ff00;
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    color: #00e5ff;
     margin-bottom: 15px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 5px;
 }
 
-.project-card p {
-    color: #a29dbd;
-    margin-bottom: 25px;
+.skill-card ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* الزراير الخضراء */
-.btn-green {
-    display: inline-block;
-    background-color: #238636; /* أخضر تقني */
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
+.skill-card li {
+    color: #bbb;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
 }
 
-.btn-green:hover {
-    background-color: #2ea043;
-    box-shadow: 0 0 10px rgba(46, 160, 67, 0.4);
+.skill-card li::before {
+    content: "▹";
+    color: #00ff00;
+    margin-right: 8px;
 }
 
-/* Contact Section */
-.contact-info a {
-    color: #bc77ff; /* لينكات التواصل بالبنفسجي */
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: 0.3s;
-}
-
-.contact-info a:hover {
-    color: #4493f8; /* تتحول لأزرق عند الـ Hover */
-    border-bottom: 1px solid #4493f8;
+/* Main Container Adjustment */
+.container {
+    margin-top: 100px; /* 3ashan el-kalam mayjiish taht el-navbar */
 }
